@@ -1,0 +1,110 @@
+body {
+    background: rgb(31,68,105);
+    background: linear-gradient(90deg, rgba(31,68,105,1) 0%, rgba(2,12,22,1) 100%);
+    height: 100vh;
+}
+
+html {
+    height: 100vh;
+}
+
+.login-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(180deg, rgb(19, 44, 70) 0%, rgba(2,12,22,1) 100%);
+    box-shadow: 3px 3px 10px 1px black; /* increase box-shadow values by 2 */
+    border-radius: 75px; /* increase border-radius by 2 */
+    padding: 80px; /* increase padding by 2 */
+  }
+
+@media (max-width: 900px) {
+    .login-box {
+        top: 50%;
+        padding: 60px; /* increase padding by 2 */
+        width: 80%;
+    }
+    .footer {
+        margin-top: 40vh;
+    }
+}
+  
+  h2 {
+    margin: 0 0 45px; /* increase margin by 2 */
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: clamp(40px, 3vw, 50px);/* increase font size by 2 */
+    font-family: "Raleway", sans-serif;
+
+  }
+  
+  .user-box {
+    position: relative;
+    margin-bottom: 0px;
+  }
+  
+  .user-box input {
+    width: 100%;
+    padding: 15px 0; /* increase padding by 2 */
+    font-size: clamp(16px, 1vw, 24px);/* increase font size by 2 */
+    color: #fff;
+    margin-bottom: 45px; /* increase margin by 2 */
+    border: none;
+    border-bottom: 1.5px solid #fff; /* increase border-bottom value by 2 */
+    background: transparent;
+    outline: none;
+  }
+  
+  .user-box label {
+    font-family: "Raleway", sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px 0; /* increase padding by 2 */
+    font-size: clamp(16px, 1vw, 24px);/* increase font size by 2 */
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  
+  .user-box input:focus ~ label,
+  .user-box input:valid ~ label {
+    top: -30px; /* increase top value by 2 */
+    left: 0;
+    color: white;
+    font-size: clamp(16px, 1vw, 24px);/* increase font size by 2 */
+  }
+  
+  .submit-btn {
+    font-family: "Raleway", sans-serif;
+    background: transparent;
+    border: 1px solid white;
+    color: #fff;
+    padding: 19.5px 36px; /* increase padding by 2 */
+    cursor: pointer;
+    border-radius: 37.5px; /* increase border-radius by 2 */
+    margin-top: 1.5px; /* increase margin by 2 */
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5); /* increase box-shadow values by 2 */
+    font-size: clamp(16px, 1vw, 24px);/* increase font size by 2 */
+    transition: 0.5s;
+  }
+  
+  button:hover {
+    background: rgb(1, 8, 17);
+    color: #ffffff;
+  }
+  
+
+  .footer {
+    position: relative;
+    background: rgb(31,68,105);
+    background: linear-gradient(90deg, rgba(31,68,105,1) 0%, rgba(2,12,22,1) 100%);
+    background-repeat:no-repeat;
+    height: 130px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 20px 0;
+    margin-top: 80vh;
+}

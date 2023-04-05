@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles-header.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="shortcut icon" href="{% static 'public/Images/Ecojeli_logo_trans.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{% static 'images/ibmunlogo.jpg' %}">
+    <title>IBeeMUN</title>
+    <script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                {% if admin %}
+                <li>
+                    <a href="{% url 'add' %}" class="not-login">Add an announcement</a>
+                </li>
+                {% endif %}
+                <li>
+                    <a href="{% url 'main' %}" class="not-login">Main</a>
+                </li>
+                <li>
+                    <a class="not-login" href="{% url 'ourteam' %}">About Us</a>
+                </li>
+                <li>
+                    <a class="not-login" href="{% url 'announcements' %}">Announcements</a>
+                </li>
+                <li>
+                    <a href="{% url 'loginsystem' %}" target="_blank">
+                        <button type="button" class="btn">Log in</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="empty"></div>
+<link rel="stylesheet" href="{% static 'css/styles-ann.css' %}">
+
+<div class="main">
+    {% if announcements %}
+        {% for announcement in announcements %}
+        <div class="unit" id="id19032022">
+            <h1>{{ announcement.title }}</h1>
+            <p class="date">{{ announcement.date }}</p>
+            <p class="info">{{ announcement.paragraph }}</p>
+            <input type="checkbox" class="expand-btn">
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="unit">
+            <h1>No announcements yet...</h1>
+        </div>
+    {% endif %}
+</div>
+</body>
+<link rel="stylesheet" href="{% static 'css/styles-footer.css' %}">
+<div class="empty1"></div>
+<div class='footer'>
+    <div class="social">
+      <a href="https://www.instagram.com/ibeemun/"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-telegram"></i></a>
+    </div>
+    <p class="copyright">IBeeMUN @ 2023</p>
+  </div>
+</html>

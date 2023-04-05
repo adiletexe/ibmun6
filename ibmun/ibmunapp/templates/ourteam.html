@@ -1,0 +1,237 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles-header.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="shortcut icon" href="{% static 'public/Images/Ecojeli_logo_trans.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{% static 'images/ibmunlogo.jpg' %}">
+    <title>IBeeMUN</title>
+    <script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="{% url 'main' %}" class="not-login">Main</a>
+                </li>
+                <li>
+                    <a class="not-login" href="{% url 'ourteam' %}">About Us</a>
+                </li>
+                <li>
+                    <a class="not-login" href="{% url 'announcements' %}">Announcements</a>
+                </li>
+                <li>
+                    <a href="{% url 'loginsystem' %}" target="_blank">
+                        <button type="button" class="btn">Log in</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="empty"></div>
+<link rel="stylesheet" href="{% static 'css/styles-our-team.css' %}">
+
+        <div class="title">Our staff</div>
+        <div class="roles">
+
+            <h1>Core Secretariat</h1>
+            <div class="core-secretariat">
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8657 (2).jpg' %}" alt="Aidana Valikhan">
+                    </div>
+                    <p class="name">Aidana Valikhan</p>
+                    <p class="sub-role">Director General</p>
+                    <p class="sub-role">Financial Manager</p>
+                </div>
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8740.jpg' %}" alt="Murat Almas">
+                    </div>
+                    <p class="name">Murat Almas</p>
+                    <p class="sub-role">Secretary General</p>
+                </div>
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8682.jpg' %}" alt="Mira Sultangaliyeva">
+                    </div>
+                    <p class="name">Mira Sultangaliyeva</p>
+                    <p class="sub-role">Chief of Staff</p>
+                </div>
+            </div>
+
+
+            <h1>Supervisors</h1>
+            <div class="supervisors">
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/super1.jpg' %}" alt="Zhikibekova Kuralay">
+                    </div>
+                    <p class="name">Zhikibekova Kuralay</p>
+                    <p class="sub-role">Supervisor</p>
+                </div>
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/super2.jpg' %}" alt="Sarsenbekova Symbat">
+                    </div>
+                    <p class="name">Sarsenbekova Symbat</p>
+                    <p class="sub-role">Supervisor</p>
+                </div>
+            </div>
+
+
+            <h1>Educational Leaders</h1>
+            <div class="educational-leaders">
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8721.jpg' %}" alt="Orazkhan Yelnaz">
+                    </div>
+                    <p class="name">Yelnaz Orazkhan</p>
+                    <p class="sub-role">Chair of UNDP</p>
+                    <p class="sub-role">Educational Leader of Delegates</p>
+                </div>
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8730.jpg' %}" alt="Shapenova Aiganym">
+                    </div>
+                    <p class="name">Shapenova Aiganym</p>
+                    <p class="sub-role">Educational Leader of Chairs</p>
+                    <p class="sub-role">Co-chair of UNSC committee</p>
+                </div>
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/no-profile-pic-icon-24.jpeg' %}" alt="Kyrmyzy Aryn">
+                    </div>
+                    <p class="name">Kyrmyzy Aryn</p>
+                    <p class="sub-role">Educational leader of Delegates</p>
+                    <p class="sub-role">Co-Chair of UNSC Committee</p>
+                </div>
+            </div>
+
+
+            <h1>Delegate Affairs</h1>
+            <div class="delegate-affairs">
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8734.jpg' %}" alt="Myrzabekova Aidana">
+                    </div>
+                    <p class="name">Myrzabekova Aidana</p>
+                    <p class="sub-role">Educational Leader of Delegates</p>
+                    <p class="sub-role">Chair of Unicef Committee</p>
+                </div>
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8708.jpg' %}" alt="Mukhamedzhanov Arsen">
+                    </div>
+                    <p id="arsen" class="name">Mukhamedzhanov Arsen</p>
+                    <p class="sub-role">Delegate Affairs Commissioner</p>
+                    <p class="sub-role">Financial Manager</p>
+                    <p class="sub-role">Co-Chair of UNDP Committee</p>
+                </div>
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8630.jpg' %}" alt="Maulenova Zarina">
+                    </div>
+                    <p class="name">Maulenova Zarina</p>
+                    <p class="sub-role">Delegate Affairs Commissioner</p>
+                </div>
+            </div>
+            <div class="delegate-affairs">
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8737.jpg' %}" alt="Abdikerimova Zhanetta">
+                    </div>
+                    <p class="name">Abdikerimova Zhanetta</p>
+                    <p class="sub-role">Delegate Affairs Commissioner</p>
+                </div>
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8668.jpg' %}" alt="Abdikerimova Zhanetta">
+                    </div>
+                    <p class="name">Kozhakhmetov Sanzhar</p>
+                    <p class="sub-role">Delegate Affairs Commissioner</p>
+                </div>
+            </div>
+
+
+            <h1>SMM Developers</h1>
+            <div class="smm-dev">
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8661.jpg' %}" alt="Usein Zarema">
+                    </div>
+                    <p class="name">Usein Zarema</p>
+                    <p class="sub-role">SMM reels-maker</p>
+                </div>
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/no-profile-pic-icon-24.jpeg' %}" alt="Muratkyzy Elnaz">
+                    </div>
+                    <p class="name">Muratkyzy Elnaz</p>
+                    <p class="sub-role">SMM stories-maker</p>
+                </div>
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8642 (3).jpg' %}" alt="Bolat Aisha">
+                    </div>
+                    <p class="name">Bolat Aisha</p>
+                    <p class="sub-role">SMM stories-maker</p>
+                </div>
+            </div>
+            <div class="smm-dev">
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static '/images/no-profile-pic-icon-24.jpeg' %}" alt="Abdrakhmanova Ayaulym">
+                    </div>
+                    <p class="name">Abdrakhmanova Ayaulym</p>
+                    <p class="sub-role">Document Designer</p>
+                </div>
+            </div>
+
+            <h1>IT Specialists</h1>
+            <div class="it-specialists">
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/IMG_8704.jpg' %}" alt="Ausarbekov Adilet">
+                    </div>
+                    <p class="name">Aussarbekov Adilet</p>
+                    <p class="sub-role">Back-end Developer</p>
+                </div>
+                <div class="card">
+                    <div class="photo">
+                        <img src="{% static 'images/no-profile-pic-icon-24.jpeg' %}" alt="Unknown">
+                    </div>
+                    <p class="name">Shakeyev Alen</p>
+                    <p class="sub-role">Front-end Developer</p>
+                </div>
+            </div>
+        </div>
+    </body>
+<link rel="stylesheet" href="{% static 'css/styles-footer.css' %}">
+<div class="empty1"></div>
+<div class='footer'>
+    <div class="social">
+      <a href="https://www.instagram.com/ibeemun/"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-telegram"></i></a>
+    </div>
+    <p class="copyright">IBeeMUN @ 2023</p>
+  </div>
+</html>

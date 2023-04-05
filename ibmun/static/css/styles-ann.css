@@ -1,0 +1,90 @@
+html {
+    height: 100vh;
+}
+
+body {
+    background: rgb(31,68,105);
+    background: linear-gradient(90deg, rgba(31,68,105,1) 0%, rgba(2,12,22,1) 100%);
+    height: 100vh;
+}
+
+.unit {
+    max-height: fit-content;
+    width: 60%;
+    margin: 100px 10vw -50px;
+    border-radius: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top;
+    color: white;
+    font-family: 'Readex Pro', sans-serif;
+    padding: 50px 50px 0 50px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+#id20032023 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 1)), url(../images/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg);
+}
+
+#id19032022 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 1)), url(../images/jessey-bijl-5Rt5KhbUp5g-unsplash\ \(1\).jpg);
+}
+
+.unit:hover {
+    transform: scale(1.02);
+}
+
+.date {
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-size: clamp(10px, 5vw, 35px);
+}
+
+.info {
+    --max-lines: 1;
+    --line-height: 1.4;
+
+    overflow: hidden;
+
+    max-height: calc(var(--max-lines) * 1em * var(--line-height));
+    line-height: var(--line-height);
+    position: relative;
+}
+
+
+@media (max-width: 768px) {
+    .unit {
+        width: 80%;
+    }
+}
+
+.expand-btn {
+    appearance: none;
+    border: 1px solid white;
+    padding: 0.5em;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.expand-btn:hover {
+    background-color: #111111;
+}
+
+.expand-btn::before {
+    content: "Expand";
+    color: white;
+}
+
+.expand-btn:checked::before {
+    content: "Collapse";
+}
+
+.info:has(+ .expand-btn:checked) {
+    max-height: none;
+    transition: 3s;
+
+}
